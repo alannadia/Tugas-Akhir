@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/coba', function () {
-    return view('stisla//parent');
+    return view('pages.siswa.contoh');
 });
