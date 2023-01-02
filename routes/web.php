@@ -20,3 +20,14 @@ Route::get('/', function () {
 Route::get('/coba', function () {
     return view('pages.siswa.contoh');
 });
+
+// SISWA
+
+// AKHIR SISWA
+
+
+// WALIKELAS
+Route::get('/walikelas/dashboard', function () {
+    return view('pages.walikelas.dashboard');
+});
+// AKHIR WALIKELAS
