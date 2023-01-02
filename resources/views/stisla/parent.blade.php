@@ -21,7 +21,7 @@
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            @yield('title')
+          <h4>@yield('title')</h4>
           </div>
 
           <div class="section-body">

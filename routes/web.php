@@ -17,12 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/coba', function () {
-    return view('pages.siswa.contoh');
+
+// ROUTE SISWA 
+Route::get('/siswa', function () {
+    return view('pages.siswa.dashboard');
 });
-
-// SISWA
-
+Route::get('/score', function () {
+    return view('pages.siswa.score');
+});
 // AKHIR SISWA
 
 
@@ -31,3 +33,4 @@ Route::get('/walikelas/dashboard', function () {
     return view('pages.walikelas.dashboard');
 });
 // AKHIR WALIKELAS
+
