@@ -17,6 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/coba', function () {
-    return view('pages.siswa.contoh');
+
+// ROUTE SISWA 
+Route::get('/siswa', function () {
+    return view('pages.siswa.dashboard');
 });
+
+Route::get('/score', function () {
+    return view('pages.siswa.score');
+});
+// AKHIR ROUTE SISWA

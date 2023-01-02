@@ -21,12 +21,13 @@
       <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <!-- ISI KONTEN -->
-            @yield('content')
-            <!-- AKHIR ISI KONTEN -->
+          <h4>@yield('title')</h4>
           </div>
 
           <div class="section-body">
+             <!-- ISI KONTEN -->
+             @yield('content')
+            <!-- AKHIR ISI KONTEN -->
           </div>
         </section>
       </div>
