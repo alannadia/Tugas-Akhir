@@ -2,31 +2,9 @@
 @section('title','Score Report')
 @section('content')
 
-<table class="table table-striped">
-  <tr>
-    <thead>
-        <th>No</th>
-        <th>Tanggal</th>
-        <th>Score</th>
-        <th>Keterangan Pelanggaran</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Centro comercial Moctezuma</td>
-        <td>Francisco Chang</td>
-        <td>Mexico</td>
-      </tr>
-    </thead>
-</table>
 <div class="row">
 
-    <div class="col-12 col-md-6 col-lg-6">
+    <div class="col-12 col-md-8 col-lg-8">
     <div class="card">
         <div class="card-header">
         <h4>Simple Table</h4>
