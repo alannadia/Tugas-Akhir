@@ -32,6 +32,9 @@ Route::get('/siswa/score', function () {
 Route::get('/walikelas/dashboard', function () {
     return view('pages.walikelas.dashboard');
 });
+Route::get('/walikelas/students', function () {
+    return view('pages.walikelas.students');
+});
 // AKHIR WALIKELAS
 
 //ADMIN 
