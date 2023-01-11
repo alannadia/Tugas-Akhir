@@ -19,10 +19,10 @@ Route::get('/', function () {
 
 
 // ROUTE SISWA 
-Route::get('/siswa', function () {
+Route::get('/siswa/dashboard', function () {
     return view('pages.siswa.dashboard');
 });
-Route::get('/score', function () {
+Route::get('/siswa/score', function () {
     return view('pages.siswa.score');
 });
 // AKHIR SISWA
@@ -33,6 +33,18 @@ Route::get('/walikelas/dashboard', function () {
     return view('pages.walikelas.dashboard');
 });
 // AKHIR WALIKELAS
+
+//ADMIN 
+Route::get('/admin/dashboard',function(){
+    return view('pages.admin.dashboard');
+});
+Route::get('/admin/masterkelas',function(){
+    return view('pages.admin.MasterKelas');
+});
+Route::get('/admin/masterscore',function(){
+    return view('pages.admin.MasterScore');
+});
+//AKHIR ADMIN 
 
 
 Route::get('/login', function () {

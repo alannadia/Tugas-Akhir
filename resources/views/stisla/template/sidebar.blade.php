@@ -8,11 +8,17 @@
             <a href="index.html"><img src="image/logo.png" alt="" width="30px"></a>
           </div>
           <ul class="sidebar-menu">
-              <li class="menu-header">Dashboard</li>
+              <li class="menu-header">SISWA</li>
+              <li class="active"><a class="nav-link" href="/siswa/dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+                  <li><a class="nav-link" href="/siswa/score"><i class="fas fa-folder-open"></i>Score Report</a></li>
+           
+              <li class="menu-header">ADMIN</li>
+              <li class="active"><a class="nav-link" href="/admin/dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
               <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-home"></i><span>Dashboard</span></a>
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-users"></i> <span>Students</span></a>
                 <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="/score"><i class="fas fa-folder-open"></i>Score Report</a></li>
+                <li><a class="nav-link" href="/admin/masterkelas">Daftar Kelas</a></li>
+                  <li><a class="nav-link" href="/admin/masterscore">Score</a></li>
                 </ul>
               </li>
               <li class="menu-header">WALIKELAS</li>

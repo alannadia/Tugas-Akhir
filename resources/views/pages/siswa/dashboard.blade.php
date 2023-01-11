@@ -22,12 +22,12 @@
       <div class="col-md-4">
       <div class="card shadow mb-3 " style="height: 500px;" >
           <div class="card-body text-center">
-              <img src="image/student-icon.jpg" style="width: 200px; height: 200px;" class="rounded-circle">
+              <img src="{{asset ('image/student-icon.jpg')}}" style="width: 200px; height: 200px;" class="rounded-circle">
               <div class="col mt-3">
               <h6>SMKN 1 SURABAYA</h6>
               <span>1245678</span>
               </div>
-          </div>
+          </div>  
           </div>
       </div>
       <div class="col-md-7">
@@ -42,13 +42,6 @@
     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
   </li>
   <li>
-
-  <div class="section-header-breadcrumb">
-              <div class="breadcrumb-item active"><a href="#" class="btn btn-primary btn-circle" style="margin-left: 300px;" ><i class="fas fa-user-edit"></i></a></div>
-   </div>
-
-
-
 
   <!-- <a href="#" class="btn btn-primary btn-circle" style="margin-left: 300px;" ><i class="fas fa-user-edit"></i></a> -->
     <!-- <span class="badge bg-primary rounded-pill" style="margin-left:270px; color:beige">17-8-1945</span> -->
@@ -80,6 +73,9 @@
                         <tr><td valign="top" >Jenis Kelamin</td><td width="50%">: Perempuan</td></tr>
                        </tbody>
                     </table>
+                    <div>
+              <div class="breadcrumb-item active"><a href="#" class="btn btn-primary btn-circle" style="margin-left: 300px;" ><i class="fas fa-user-edit"></i></a></div>
+         </div>
                  </div>
                  </div>
                   </div>
