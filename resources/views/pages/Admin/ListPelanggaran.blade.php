@@ -16,6 +16,18 @@
               <th>Score</th>
               <th>Action</th>
             </tr>
+            <?php $i = 1;?>
+            @foreach($data as $item)
+            <tr>
+              <td><?= $i++;?></td>
+              <td>{{$item->bentuk_pelanggaran}}</td>
+              <td><div class="badge badge-<?php if($item->score <= 55){ echo"success"; }elseif($item->score > 55 && $item->score <=149){ echo"warning";}elseif($item->score > 149 && $item->score <=250){ echo"danger";} ?>">{{ $item->score }}</div></td>
+              <td>
+              <a href="#" class="btn btn-warning btn-circle"><i class="fas fa-user-edit"></i></a>
+              <a href="#" class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            @endforeach
             <tr>
               <td>1</td>
               <td>Tidak membawa buku penghubung dan kartu pelajar</td>
@@ -53,7 +65,9 @@
         <h4>Tambah Data</h4>
       </div>
       <div class="card-body">
-        <form method="POST" action="{{ route('listpelanggaran.store') }}">
+      
+        <form method="post" action="{{ route('listpelanggaran.store') }}">
+        @csrf
         <div class="form-group">
           <label>Keterangan Pelanggaran</label>
           <input type="text" class="form-control" name="keterangan">

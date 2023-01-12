@@ -22,7 +22,6 @@ class CreateWalikelasTable extends Migration
             $table->String('nama');
             $table->BigInteger('no_telp')->unsigned();
             $table->String('jenis_kelamin');
-            $table->String('email');
             $table->String('foto');
             $table->timestamps();
         });

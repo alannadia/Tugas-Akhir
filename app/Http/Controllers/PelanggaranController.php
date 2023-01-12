@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pelanggaran;
+use App\Models\DetailPelanggaran;
 
 class PelanggaranController extends Controller
 {
@@ -14,7 +15,8 @@ class PelanggaranController extends Controller
      */
     public function index()
     {
-        return view('pages.Admin.listpelanggaran');
+        $data=Pelanggaran::all();
+        return view('pages.Admin.listpelanggaran',compact('data'));
     }
 
     /**
@@ -25,6 +27,7 @@ class PelanggaranController extends Controller
     public function create()
     {
         //
+        return view('/admin/listpelanggaran');
     }
 
     /**
@@ -35,7 +38,11 @@ class PelanggaranController extends Controller
      */
     public function store(Request $request)
     {
-
+      Pelanggaran::create([
+        'bentuk_pelanggaran'=> $request->keterangan,
+        'score'=>$request->score
+      ]);
+      return redirect('/admin/listpelanggaran');
     }
 
     /**
