@@ -35,7 +35,7 @@ class PelanggaranController extends Controller
      */
     public function store(Request $request)
     {
-      
+
     }
 
     /**
