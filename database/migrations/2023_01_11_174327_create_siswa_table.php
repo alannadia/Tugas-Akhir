@@ -15,10 +15,11 @@ class CreateSiswaTable extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->id('nisn');
+            $table->String('nama');
             $table->BigInteger('kelas_id')->unsigned();
             $table->foreign('kelas_id')->references('id')->on('kelas')
-                  ->onDelete('cascade')
-                  ->onUpdate('cascade');
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
             $table->BigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')
                   ->onDelete('cascade')

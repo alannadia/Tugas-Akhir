@@ -14,7 +14,6 @@ class Walikelas extends Model
         'nama',
         'no_telp',
         'jenis_kelamin',
-        'email',
         'foto'
     ];
     protected $table = 'walikelas';
