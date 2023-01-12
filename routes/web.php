@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PelanggaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +48,7 @@ Route::get('/admin/masterkelas',function(){
 Route::get('/admin/masterscore',function(){
     return view('pages.admin.MasterScore');
 });
+Route::resource('/admin/listpelanggaran', PelanggaranController::class);
 //AKHIR ADMIN 
 
 
