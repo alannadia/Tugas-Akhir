@@ -10,7 +10,7 @@
           <ul class="sidebar-menu">
               <li class="menu-header">SISWA</li>
               <li class="active"><a class="nav-link" href="/siswa/dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
-                  <li><a class="nav-link" href="/siswa/score"><i class="fas fa-folder-open"></i>Score Report</a></li>
+              <li><a class="nav-link" href="/siswa/score"><i class="fas fa-folder-open"></i><span>Score Report</span></a></li>
            
               <li class="menu-header">ADMIN</li>
               <li class="active"><a class="nav-link" href="/admin/dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>

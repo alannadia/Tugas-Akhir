@@ -26,8 +26,7 @@ class PelanggaranController extends Controller
      */
     public function create()
     {
-        //
-        return view('/admin/listpelanggaran');
+
     }
 
     /**
@@ -38,12 +37,22 @@ class PelanggaranController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->keterangan);
+     
+      $messages = [
+            'required' => ':attribute tidak boleh kosong',
+            'min' =>  ':attribute tidak boleh kosong',
+        ];
+        
+      $this->validate($request,[
+            'keterangan' => 'required',
+            'score' => 'required | numeric|min:1'
+      ],$messages);
+
       Pelanggaran::create([
         'bentuk_pelanggaran'=> $request->keterangan,
         'score'=>$request->score
       ]);
-      return redirect('/admin/listpelanggaran');
+      return redirect('/admin/listpelanggaran')->with('pesan', 'Data Berhasil Ditambahkan  ');
     }
 
     /**
@@ -54,7 +63,7 @@ class PelanggaranController extends Controller
      */
     public function show($id)
     {
-        //
+      
     }
 
     /**
@@ -65,7 +74,7 @@ class PelanggaranController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**
@@ -77,7 +86,23 @@ class PelanggaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $messages = [
+          'required' => ':attribute tidak boleh kosong',
+          'min' =>  ':attribute tidak boleh kurang dari 1'
+        ];
+          
+        $this->validate($request,[
+              'bentuk_pelanggaran' => 'required',
+              'score' => 'required | numeric|min:1'
+        ],$messages);
+
+      $pelanggaran = Pelanggaran::find($id);
+      $pelanggaran->update([
+          'bentuk_pelanggaran' =>  $request->bentuk_pelanggaran,
+          'score' =>  $request->score
+      ]);
+
+      return redirect('/admin/listpelanggaran')->with('pesan','Data berhasil diubah');
     }
 
     /**
@@ -88,7 +113,8 @@ class PelanggaranController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Pelanggaran::find($id)->delete();
+        return redirect('/admin/listpelanggaran')->with('pesan','Data berhasil dihapus');
     }
 
     public function hapus($id){

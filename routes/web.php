@@ -57,5 +57,5 @@ Route::get('/admin/listpelanggaran/{id_pelanggaran}/hapus',[PelanggaranControlle
 
 
 Route::get('/login', function () {
-    return view('login');
+    return view('login2');
 });
