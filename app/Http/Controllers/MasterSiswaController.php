@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Pelanggaran;
 use App\Models\DetailPelanggaran;
+use Illuminate\Http\Request;
 
-class PelanggaranController extends Controller
+class MasterSiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class PelanggaranController extends Controller
      */
     public function index()
     {
-        $data=Pelanggaran::all();
-        return view('pages.Admin.listpelanggaran',compact('data'));
+        //
+        return view("pages/admin/MasterScore");
     }
 
     /**
@@ -27,7 +26,7 @@ class PelanggaranController extends Controller
     public function create()
     {
         //
-        return view('/admin/listpelanggaran');
+        return view("pages/admin/CreateSiswa");
     }
 
     /**
@@ -38,12 +37,13 @@ class PelanggaranController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->keterangan);
-      Pelanggaran::create([
-        'bentuk_pelanggaran'=> $request->keterangan,
-        'score'=>$request->score
-      ]);
-      return redirect('/admin/listpelanggaran');
+        //
+        DetailPelanggaran::create([
+        'nama'=> $request->nama,
+        'kelas'=>$request->kelas_id,
+        'tanggal'
+
+        ]);
     }
 
     /**
@@ -89,11 +89,5 @@ class PelanggaranController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function hapus($id){
-        $data=Pelanggaran::find($id);
-        $data->delete();
-        return redirect('/admin/listpelanggaran');
     }
 }

@@ -24,19 +24,10 @@
               <td><div class="badge badge-<?php if($item->score <= 55){ echo"success"; }elseif($item->score > 55 && $item->score <=149){ echo"warning";}elseif($item->score > 149 && $item->score <=250){ echo"danger";} ?>">{{ $item->score }}</div></td>
               <td>
               <a href="#" class="btn btn-warning btn-circle"><i class="fas fa-user-edit"></i></a>
-              <a href="#" class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></i></a>
+              <a href="{{route('ListPelanggaran.hapus', $item->id)}}" class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></i></a>
               </td>
             </tr>
-            @endforeach
-            <tr>
-              <td>1</td>
-              <td>Tidak membawa buku penghubung dan kartu pelajar</td>
-              <td><div class="badge badge-success">10</div></td>
-              <td>
-                <a href="#" class="btn btn-warning btn-circle"><i class="fas fa-user-edit"></i></a>
-                <a href="#" class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></i></a>
-              </td>
-            </tr>
+            @endforeach   
           </table>
         </div>
       </div>

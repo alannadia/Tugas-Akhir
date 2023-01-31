@@ -41,11 +41,6 @@
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
   </li>
-  <li>
-
-  <!-- <a href="#" class="btn btn-primary btn-circle" style="margin-left: 300px;" ><i class="fas fa-user-edit"></i></a> -->
-    <!-- <span class="badge bg-primary rounded-pill" style="margin-left:270px; color:beige">17-8-1945</span> -->
-  </li>
 </ul>
 
 
@@ -74,7 +69,7 @@
                        </tbody>
                     </table>
                     <div>
-              <div class="breadcrumb-item active"><a href="#" class="btn btn-primary btn-circle" style="margin-left: 300px;" ><i class="fas fa-user-edit"></i></a></div>
+              
          </div>
                  </div>
                  </div>

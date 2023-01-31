@@ -4,7 +4,9 @@
 <div class="col-12">
     <div class="card">
     <div class="card-header">
-                    <h4>Data Score Siswa</h4>
+      <div class="col-9">
+        <a class="btn btn-success " href="{{route('mastersiswa.create')}}">Tambah Siswa</a>
+      </div>
                     <div class="card-header-form">
                       <form>
                         <div class="input-group">
@@ -17,12 +19,13 @@
                     </div>
                   </div>
     <div class="card-body">
-        <div class="table-responsive">
-        <div class="dataTables_wrapper dt-bootstrap4 no-footer">
+        <div class="table-responsive  table table-striped">
+        <div id="table-1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                 <div class="row"><div class="col-sm-12"><table class="table table-striped dataTable no-footer" id="table-1" role="grid" aria-describedby="table-1_info">
             <thead>
                 <th>No</th>
-                <th>Nama</th>
+                <th>Nisn</th>
+                <th style="width: 150px!important;">Nama</th>
                 <th>Kelas</th>
                 <th>Tanggal</th>
                 <th>Score</th>
@@ -32,6 +35,7 @@
             <tbody>  
             <tr>
                 <td>1</td>
+                <td>50987654</td>
                 <td>Adinda Jati Mulia</td>
                 <td>XII RPL 1</td>
                 <td>2018-01-20</td>
@@ -44,6 +48,7 @@
             </tr>
             <tr >
                 <td class=>2</td>
+                <td>12345678</td>
                 <td>Alan Nadia Bella Sahira</td>
                 <td>XII OTKP 2</td>
                 <td>2018-01-20</td>
@@ -56,6 +61,7 @@
             </tr>
             <tr>
                 <td class=>3</td>
+                <td>78964567</td>
                 <td>Bima Wahyu Luckyta</td>
                 <td>XII TKJ 3</td>
                 <td>2018-01-20</td>
@@ -68,6 +74,7 @@
             </tr>
             <tr>
                 <td class=>4</td>
+                <td>09837645</td>
                 <td>Andrean Firmansyah</td>
                 <td>XII MM 4</td>
                 <td>2018-01-20</td>
