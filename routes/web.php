@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MasterScoreController;
 use App\Http\Controllers\MasterSiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PelanggaranController;
@@ -49,6 +50,7 @@ Route::get('/admin/masterkelas',function(){
 Route::get('/admin/masterscore',function(){
     return view('pages.admin.MasterScore');
 });
+Route::resource('/admin/masterscore',MasterScoreController::class);
 Route::resource('/admin/listpelanggaran', PelanggaranController::class);
 Route::resource('/admin/mastersiswa',MasterSiswaController::class);
 
