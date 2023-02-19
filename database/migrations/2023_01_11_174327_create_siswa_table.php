@@ -28,6 +28,7 @@ class CreateSiswaTable extends Migration
             $table->String('email');
             $table->BigInteger('no_telp');
             $table->String('foto');
+            $table->BigInteger('score');
             $table->timestamps();
         });
     }

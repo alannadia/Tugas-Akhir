@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\DetailPelanggaran;
 
 class Pelanggaran extends Model
 {
@@ -14,4 +15,7 @@ class Pelanggaran extends Model
     ];
 
     protected $table = 'pelanggaran';
+    public function detailpelanggaran(){
+        return $this->hasMany(DetailPelanggaran::class, 'pelanggaran_id', 'id');
+    }
 }

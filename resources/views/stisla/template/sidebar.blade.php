@@ -2,7 +2,7 @@
 <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="#">SMKN 1 SURABAYA</a>
+            <a href="#" style="font-family: 'Viga', sans-serif;font-size:16px;">SMKN 1 SURABAYA</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html"><img src="image/logo.png" alt="" width="30px"></a>
@@ -24,7 +24,7 @@
               <li><a class="nav-link" href="/admin/listpelanggaran"><i class="fas fa-list-ol"></i> <span>List Pelanggaran</span></a></li>
               <li class="menu-header">WALIKELAS</li>
               <li class="active"><a class="nav-link" href="blank.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
-              <li class="active"><a class="nav-link" href="blank.html"><i class="fas fa-user"></i> <span>Students</span></a></li>
+              <li ><a class="nav-link" href="blank.html"><i class="fas fa-user"></i> <span>Students</span></a></li>
             </ul>
         </aside>
       </div>

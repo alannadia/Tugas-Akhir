@@ -47,9 +47,9 @@ Route::get('/admin/dashboard',function(){
 Route::get('/admin/masterkelas',function(){
     return view('pages.admin.MasterKelas');
 });
-Route::get('/admin/masterscore',function(){
-    return view('pages.admin.MasterScore');
-});
+// Route::get('/admin/masterscore',function(){
+//     return view('pages.admin.MasterScore');
+// });
 Route::resource('/admin/masterscore',MasterScoreController::class);
 Route::resource('/admin/listpelanggaran', PelanggaranController::class);
 Route::resource('/admin/mastersiswa',MasterSiswaController::class);

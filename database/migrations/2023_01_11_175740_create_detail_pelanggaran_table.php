@@ -14,7 +14,8 @@ class CreateDetailPelanggaranTable extends Migration
     public function up()
     {
         Schema::create('detail_pelanggaran', function (Blueprint $table) {
-            $table->id('nisn');
+            $table->id();
+            $table->BigInteger('nisn')->unsigned();
             $table->foreign('nisn')->references('nisn')->on('siswa')
                   ->onDelete('cascade')
                   ->onUpdate('cascade');

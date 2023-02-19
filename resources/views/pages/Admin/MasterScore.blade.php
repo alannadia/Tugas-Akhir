@@ -5,7 +5,7 @@
     <div class="card">
     <div class="card-header">
       <div class="col-9">
-        <a class="btn btn-success " href="{{route('mastersiswa.create')}}">Tambah Siswa</a>
+        <a class="btn btn-success " href="{{route('masterscore.create')}}">Tambah Siswa</a>
       </div>
                     <div class="card-header-form">
                       <form>
@@ -30,62 +30,29 @@
                 <th>Tanggal</th>
                 <th>Score</th>
                 <th>Keterangan</th>
-                <th>Action</th>
+                <th width="150px">Action</th>
             </thead>
             <tbody>  
+            <?php $i=1;?>
+            @foreach( $detailpelanggaran as $dt )
             <tr>
-                <td>1</td>
-                <td>50987654</td>
-                <td>Adinda Jati Mulia</td>
-                <td>XII RPL 1</td>
-                <td>2018-01-20</td>
-                <td><div class="badge badge-danger">200</div></td>
-                <td>Berkelahi</td>
+                <td><?= $i++; ?></td>
+                <td>{{ $dt->nisn }}</td>
+                <td>{{ $dt->siswa->nama }}</td>
+                <td>{{ $dt->siswa->kelas->kelas }}</td>
+                <td>{{ $dt->tanggal }}</td>
+                <td><div class="badge badge-<?php if($dt->pelanggaran->score <= 55){ echo"success"; }elseif($dt->pelanggaran->score > 55 && $dt->pelanggaran->score <=149){ echo"warning";}elseif($dt->pelanggaran->score > 149 && $dt->pelanggaran->score <=250){ echo"danger";} ?>">{{ $dt->pelanggaran->score }}</div></td>
+                <td>{{ $dt->pelanggaran->bentuk_pelanggaran }}</td>
                 <td>
-                <a href="#" class="btn btn-warning btn-circle"><i class="fas fa-user-edit"></i></a>
-                <a href="#" class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></i></a>
+                <!-- <a href="{{ route('masterscore.edit', $dt->id )}}" class="btn btn-warning btn-circle"><i class="fas fa-user-edit"></i></a> -->
+                <form action="{{ route('masterscore.destroy', $dt->id) }}" method="post">
+                @csrf {{ method_field('DELETE') }}
+                <button class="btn btn-danger btn-circle" type="submit"><i class="fas fa-trash-alt"></i></button>
+                </form>
                 </td>
             </tr>
-            <tr >
-                <td class=>2</td>
-                <td>12345678</td>
-                <td>Alan Nadia Bella Sahira</td>
-                <td>XII OTKP 2</td>
-                <td>2018-01-20</td>
-                <td><div class="badge badge-warning">150</div></td>
-                <td>Tidak Memakai Atribut Sekolah Lengkap</td>
-                <td>
-                <a href="#" class="btn btn-warning btn-circle"><i class="fas fa-user-edit"></i></a>
-                <a href="#" class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td class=>3</td>
-                <td>78964567</td>
-                <td>Bima Wahyu Luckyta</td>
-                <td>XII TKJ 3</td>
-                <td>2018-01-20</td>
-                <td><div class="badge badge-success">100</div></td>
-                <td>Terlambat datang ke sekolah</td>
-                <td>
-                <a href="#" class="btn btn-warning btn-circle"><i class="fas fa-user-edit"></i></a>
-                <a href="#" class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td class=>4</td>
-                <td>09837645</td>
-                <td>Andrean Firmansyah</td>
-                <td>XII MM 4</td>
-                <td>2018-01-20</td>
-                <td><div class="badge badge-primary">50</div></td>
-                <td>Membuang sampah sembarangan</td>
-                <td>
-                <a href="#" class="btn btn-warning btn-circle"><i class="fas fa-user-edit"></i></a>
-                <a href="#" class="btn btn-danger btn-circle"><i class="fas fa-trash-alt"></i></a>
-                </td>
-            </tr>
-</tbody>
+            @endforeach
+        </tbody>
         </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="table-1_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="table-1_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="table-1_previous"><a href="#" aria-controls="table-1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="table-1" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item next disabled" id="table-1_next"><a href="#" aria-controls="table-1" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li></ul></div></div></div></div>
         </div>
     </div>
