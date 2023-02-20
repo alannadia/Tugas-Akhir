@@ -4,6 +4,7 @@ use App\Http\Controllers\MasterScoreController;
 use App\Http\Controllers\MasterSiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PelanggaranController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,7 @@ Route::get('/admin/listpelanggaran/{id_pelanggaran}/hapus',[PelanggaranControlle
 //AKHIR ADMIN 
 
 
-Route::get('/login', function () {
-    return view('login2');
-});
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+// Route::get('/logout')->middleware('auth');
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login.auth');

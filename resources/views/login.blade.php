@@ -17,29 +17,40 @@
     <title>LOGIN</title>
   </head>
   <body>
+
       <section class="vh-100" style="margin-top:150px;margin-bottom: 150px;">
           <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
               <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="{{asset('image/login-page.jpg')}}"
+                <img src="{{ asset('img/login-page.jpg') }}"
                   class="img-fluid" alt="Sample image">
               </div>
               <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                <form>
+                <form action="{{ route('login.auth') }}" method="post">
+                  @csrf
                   <h1 style="font-family: 'Viga', sans-serif; " class="title-login">Login</h1><br>
-                  
                   <!-- Email input -->
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form3Example3">Email</label>
-                    <input type="email" id="form3Example3" class="form-control form-control-lg"
-                      placeholder="Enter Your Email  " />
+                  <div class="form-outline mb-4 has-validation">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" id="email" class="form-control form-control-lg <?php if ($errors->first('email') != null){ echo "is-invalid";}else{ echo"";}?>" 
+                      placeholder="Enter Your Email  " name="email"/>
+                      @if($errors->first('email') != null)
+                      <div class="invalid-feedback">
+                        {{ $errors->first('email') }}
+                      </div>
+                      @endif
                   </div>
         
                   <!-- Password input -->
                   <div class="form-outline mb-3">
-                    <label class="form-label" for="form3Example4">Password</label>
-                    <input type="password" id="form3Example4" class="form-control form-control-lg"
-                      placeholder="Enter Your password" />
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" class="form-control form-control-lg <?php if ($errors->first('password') != null){ echo "is-invalid";}else{ echo"";}?>"
+                      placeholder="Enter Your password" name="password"/>
+                      @if($errors->first('password') != null)
+                      <div class="invalid-feedback">
+                        {{ $errors->first('password') }}
+                      </div>
+                      @endif
                   </div>
         
                   <div class="d-flex justify-content-between align-items-center">
@@ -54,7 +65,7 @@
                   </div>
         
                   <div class="text-center  mt-4 pt-2">
-                    <button type="button" class="btn btn-primary btn-lg"
+                    <button type="submit" class="btn btn-primary btn-lg"
                       style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
                     <p class="mt-2 pt-1 mb-0">Don't have an account? <a href="../registrasi/index.html"
                         class="link-primary text-decoration-none">Register</a></p>
