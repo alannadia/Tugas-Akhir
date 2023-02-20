@@ -1,44 +1,59 @@
 @extends('stisla.parent')
 @section('title','Master Kelas')
 @section('content')
-
-<div class="col-12 col-sm-6 col-lg-4">
-                <div class="card">
-                  <div class="card-header">
-                    <h4>Siswa Yang Sering Melanggar</h4>
-                  </div>
-                  <div class="card-body">
-                    <ul class="list-unstyled list-unstyled-border">
-                      <li class="media">
-                        <img alt="image" class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-1.png">
-                        <div class="media-body">
-                          <div class="mt-0 mb-1 font-weight-bold">Adinda Jati Mulia</div>
-                          <div>XII RPL 1</div>
-                        </div>
-                      </li>
-                      <li class="media">
-                        <img alt="image" class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-2.png">
-                        <div class="media-body">
-                          <div class="mt-0 mb-1 font-weight-bold">Alan Nadia Bella Sahira</div>
-                          <div>XII OTKP 2</div>
-                        </div>
-                      </li>
-                      <li class="media">
-                        <img alt="image" class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-3.png">
-                        <div class="media-body">
-                          <div class="mt-0 mb-1 font-weight-bold">Bima Wahyu Luckyta</div>
-                          <div>XII TKJ 3</div>
-                        </div>
-                      </li>
-                      <li class="media">
-                        <img alt="image" class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-4.png">
-                        <div class="media-body">
-                          <div class="mt-0 mb-1 font-weight-bold">Andrean Firmansyah</div>
-                          <div> XII MM 4</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+<div class="card card-warning">
+  <div class="card-header">
+    <form class="card-header-form">
+        <div class="form-group row mb-4">
+          <label class="col-form-label text-md-right col-12 col-md-5 col-lg-5">Pilih Tahun Ajaran</label>
+          <div class="col-sm-12 col-md-7 search_select_box">
+          <select class="form-select select-primary w-400" data-live-search="true" name="nisn">
+            <option data-tokens="ketchup mustard"></option>
+            <option value="" selected >2022-2023</option>
+          </select>
+          </div>
+        </div>
+    </form>
+  </div> <!-- card header -->
+  <div class="card-body mt-4" style="overflow:auto;">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 mb-4">
+      <div class="hero text-white hero-bg-image hero-bg-parallax" data-background="../assets/img/unsplash/andre-benz-1214056-unsplash.jpg">
+        <div class="hero-inner">
+          <h2>12 RPL 1</h2>
+          <p class="lead">jumlah siswa : 33</p>
+          <p class="lead">walikelas : Asmuin</p>
+          <div class="mt-4">
+            <a href="#" class="btn btn-outline-white btn-lg btn-icon icon-left"><i class="far fa-user"></i> Setup Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 mb-4">
+      <div class="hero text-white hero-bg-image hero-bg-parallax" data-background="../assets/img/unsplash/andre-benz-1214056-unsplash.jpg">
+        <div class="hero-inner">
+          <h2>12 RPL 1</h2>
+          <p class="lead">jumlah siswa : 33</p>
+          <p class="lead">walikelas : Asmuin</p>
+          <div class="mt-4">
+            <a href="#" class="btn btn-outline-white btn-lg btn-icon icon-left"><i class="far fa-user"></i> Setup Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 mb-4">
+      <div class="hero text-white hero-bg-image hero-bg-parallax" data-background="../assets/img/unsplash/andre-benz-1214056-unsplash.jpg">
+        <div class="hero-inner">
+          <h2>12 RPL 1</h2>
+          <p class="lead">jumlah siswa : 33</p>
+          <p class="lead">walikelas : Asmuin</p>
+          <div class="mt-4">
+            <a href="#" class="btn btn-outline-white btn-lg btn-icon icon-left"><i class="far fa-user"></i> Setup Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div> <!-- card body -->
+</div> <!-- card -->
 @endsection

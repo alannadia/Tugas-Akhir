@@ -616,7 +616,8 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .list-group-item.active {
-  background-color: #6777ef;
+  background-color: #e4224e;
+  border: #e4224e;
 }
 .list-group-item.disabled {
   color: #c9d7e0;
