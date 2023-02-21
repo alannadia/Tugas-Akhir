@@ -5,6 +5,7 @@ use App\Http\Controllers\MasterSiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PelanggaranController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NotificationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Route::get('/walikelas/dashboard', function () {
 Route::get('/walikelas/students', function () {
     return view('pages.walikelas.students');
 });
+Route::get('/walikelas/notifications', [NotificationsController::class, 'walikelas'])->name('notif.walikelas');
 // AKHIR WALIKELAS
 
 //ADMIN 

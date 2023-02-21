@@ -23,13 +23,14 @@
                   <li><a class="nav-link" href="/admin/masterscore">Score</a></li>
                 </ul>
               </li>
-               @endadmin
-
-               @walikelas
+              
               <li><a class="nav-link" href="/admin/listpelanggaran"><i class="fas fa-list-ol"></i> <span>List Pelanggaran</span></a></li>
+              @endadmin
+               @walikelas
               <li class="menu-header">WALIKELAS</li>
               <li class="active"><a class="nav-link" href="blank.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
               <li ><a class="nav-link" href="blank.html"><i class="fas fa-user"></i> <span>Students</span></a></li>
+              <li ><a class="nav-link" href="/walikelas/notifications"><i class="far fa-bell"></i> <span>Notifications</span></a></li>
               @endwalikelas
             </ul>
         </aside>
