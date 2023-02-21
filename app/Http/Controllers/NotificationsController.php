@@ -13,4 +13,8 @@ class NotificationsController extends Controller
         // dd($siswa);
         return view("pages/walikelas/notifications");
     }
+    
+    public function siswa(){
+        return view("pages.siswa.history");
+    }
 }

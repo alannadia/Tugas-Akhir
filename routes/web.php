@@ -30,6 +30,7 @@ Route::get('/siswa/dashboard', function () {
 Route::get('/siswa/score', function () {
     return view('pages.siswa.score');
 });
+Route::get('/siswa/history', [NotificationsController::class,'siswa'])->name('siswa/history');
 // AKHIR SISWA
 
 
@@ -41,6 +42,7 @@ Route::get('/walikelas/students', function () {
     return view('pages.walikelas.students');
 });
 Route::get('/walikelas/notifications', [NotificationsController::class, 'walikelas'])->name('notif.walikelas');
+
 // AKHIR WALIKELAS
 
 //ADMIN 
