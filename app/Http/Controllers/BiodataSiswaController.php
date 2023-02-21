@@ -2,25 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DetailPelanggaran;
 use Illuminate\Http\Request;
+use App\Models\Siswa;
+use Illuminate\Support\Facades\Auth;
 
-
-class MasterSiswaController extends Controller
+class BiodataSiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('admin');
-    }
     public function index()
     {
-        return view("pages/admin/MasterScore");
+        $id_siswa = Auth::user()->id;
+        $data_siswa = Siswa::where('user_id', $id_siswa)->get()->first();
+        return view('pages.siswa.dashboard',compact('data_siswa'));
     }
 
     /**
@@ -31,7 +28,6 @@ class MasterSiswaController extends Controller
     public function create()
     {
         //
-        return view("pages/admin/CreateSiswa");
     }
 
     /**
@@ -43,12 +39,6 @@ class MasterSiswaController extends Controller
     public function store(Request $request)
     {
         //
-        DetailPelanggaran::create([
-        'nama'=> $request->nama,
-        'kelas'=>$request->kelas_id,
-        'tanggal'
-
-        ]);
     }
 
     /**
@@ -91,7 +81,6 @@ class MasterSiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
     public function destroy($id)
     {
         //

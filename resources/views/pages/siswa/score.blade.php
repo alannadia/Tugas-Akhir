@@ -7,7 +7,7 @@
     <div class="col-12 col-md-8 col-lg-8">
     <div class="card">
         <div class="card-header">
-        <h4>Simple Table</h4>
+        <h4>Score Report</h4>
         </div>
         <div class="card-body">
         <div class="table-responsive">
@@ -18,24 +18,15 @@
                 <th>Score</th>
                 <th>Keterangan Pelanggaran</th>
             </tr>
+            <?php $i=1;?>
+            @foreach($pelanggaran_siswa as $ps)
             <tr>
-                <td>1</td>
-                <td>2017-01-09</td>
-                <td><div class="badge badge-success">100</div></td>
-                <td>Terlambat datang ke sekolah</td>
+                <td><?= $i++;?></td>
+                <td>{{$ps->tanggal}}</td>
+                <td><div class="badge badge-<?php if($ps->pelanggaran->score <= 55){ echo"success"; }elseif($ps->pelanggaran->score > 55 && $ps->pelanggaran->score <=149){ echo"warning";}elseif($ps->pelanggaran->score >  149 && $ps->pelanggaran->score <=250){ echo"danger";} ?>">{{$ps->pelanggaran->score}}</div></td>
+                <td>{{ $ps->pelanggaran->bentuk_pelanggaran }}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>2017-01-09</td>
-                <td><div class="badge badge-success">150</div></td>
-                <td>Tidak Memakai Atribut Sekolah Lengkap</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>2017-01-11</td>
-                <td><div class="badge badge-danger">200</div></td>
-                <td>Berkelahi</td>
-</tr>
+            @endforeach
             </tbody></table>
         </div>
         </div>
