@@ -5,6 +5,7 @@ use App\Http\Controllers\MasterSiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PelanggaranController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\NotificationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::get('/siswa/dashboard', function () {
 Route::get('/siswa/score', function () {
     return view('pages.siswa.score');
 });
+Route::get('/siswa/history', [NotificationsController::class,'siswa'])->name('siswa/history');
 // AKHIR SISWA
 
 
@@ -39,6 +41,7 @@ Route::get('/walikelas/dashboard', function () {
 Route::get('/walikelas/students', function () {
     return view('pages.walikelas.students');
 });
+
 // AKHIR WALIKELAS
 
 //ADMIN 
