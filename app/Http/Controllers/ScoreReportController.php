@@ -2,25 +2,26 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DetailPelanggaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\DetailPelanggaran;
+use App\Models\Pelanggaran;
+use App\Models\Siswa;
 
-
-class MasterSiswaController extends Controller
+class ScoreReportController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('admin');
-    }
     public function index()
     {
-        return view("pages/admin/MasterScore");
+        $id_siswa = Auth::user()->id;
+        $nisn = Siswa::where('user_id', $id_siswa)->get()->first()->nisn;
+        $pelanggaran_siswa = DetailPelanggaran::where('nisn', $nisn)->get();
+        return view('pages.siswa.score',compact('pelanggaran_siswa'));
+
     }
 
     /**
@@ -31,7 +32,6 @@ class MasterSiswaController extends Controller
     public function create()
     {
         //
-        return view("pages/admin/CreateSiswa");
     }
 
     /**
@@ -43,12 +43,6 @@ class MasterSiswaController extends Controller
     public function store(Request $request)
     {
         //
-        DetailPelanggaran::create([
-        'nama'=> $request->nama,
-        'kelas'=>$request->kelas_id,
-        'tanggal'
-
-        ]);
     }
 
     /**
@@ -91,7 +85,6 @@ class MasterSiswaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
     public function destroy($id)
     {
         //

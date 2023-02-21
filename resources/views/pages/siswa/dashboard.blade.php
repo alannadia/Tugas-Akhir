@@ -24,8 +24,8 @@
           <div class="card-body text-center">
               <img src="{{asset ('image/student-icon.jpg')}}" style="width: 200px; height: 200px;" class="rounded-circle">
               <div class="col mt-3">
-              <h6>SMKN 1 SURABAYA</h6>
-              <span>1245678</span>
+              <h6>{{ $data_siswa->nama }}</h6>
+              <span>{{$data_siswa->nisn}}</span>
               </div>
           </div>  
           </div>
@@ -49,11 +49,11 @@
                  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                  <table class="table table-responsive">
                        <tbody>
-                        <tr><td valign="top"  width="20%">NIS</td><td width="50%">: ABCDE</td></tr>
-                        <tr><td valign="top" >Nama</td><td width="50%">: SMKN 1 Surabaya</td></tr>
+                        <tr><td valign="top"  width="20%">NISN</td><td width="50%">: {{$data_siswa->nisn}}</td></tr>
+                        <tr><td valign="top" >Nama</td><td width="50%">: {{$data_siswa->nama}}</td></tr>
                         <tr><td valign="top">Tempat,Tanggal Lahir</td><td width="50%">: 17 Agustus 1945</td></tr>
                         <tr><td valign="top" >Agama</td><td width="50%">: Islam</td></tr>
-                        <tr><td valign="top" >Jenis Kelamin</td><td width="50%">: Perempuan</td></tr>
+                        <tr><td valign="top" >Jenis Kelamin</td><td width="50%">: {{$data_siswa->jenis_kelamin}}</td></tr>
                        </tbody>
                     </table>
                  </div>

@@ -1,11 +1,14 @@
 <?php
 
+use App\Http\Controllers\BiodataSiswaController;
 use App\Http\Controllers\MasterScoreController;
 use App\Http\Controllers\MasterSiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PelanggaranController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotificationsController;
+use App\Http\Controllers\ScoreReportController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,12 +27,8 @@ Route::get('/', function () {
 
 
 // ROUTE SISWA 
-Route::get('/siswa/dashboard', function () {
-    return view('pages.siswa.dashboard');
-});
-Route::get('/siswa/score', function () {
-    return view('pages.siswa.score');
-});
+Route::resource('/siswa/dashboard',BiodataSiswaController::class);
+Route::resource('/siswa/score',ScoreReportController::class);
 Route::get('/siswa/history', [NotificationsController::class,'siswa'])->name('siswa/history');
 // AKHIR SISWA
 
