@@ -53,6 +53,18 @@
         </div>
       </div>
     </div>
+    <div class="col-sm-12 col-md-4 mb-4">
+      <div class="hero text-white hero-bg-image hero-bg-parallax" data-background="../assets/img/unsplash/andre-benz-1214056-unsplash.jpg">
+        <div class="hero-inner">
+          <h2>12 RPL 1</h2>
+          <p class="lead">jumlah siswa : 33</p>
+          <p class="lead">walikelas : Asmuin</p>
+          <div class="mt-4">
+            <a href="#" class="btn btn-outline-white btn-lg btn-icon icon-left"><i class="far fa-user"></i> Setup Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   </div> <!-- card body -->
 </div> <!-- card -->
