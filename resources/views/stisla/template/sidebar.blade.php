@@ -8,10 +8,12 @@
             <a href="index.html"><img src="image/logo.png" alt="" width="30px"></a>
           </div>
           <ul class="sidebar-menu">
+              @siswa
               <li class="menu-header">SISWA</li>
               <li class="active"><a class="nav-link" href="/siswa/dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
               <li><a class="nav-link" href="/siswa/score"><i class="fas fa-folder-open"></i><span>Score Report</span></a></li>
-           
+              @endsiswa
+              @admin
               <li class="menu-header">ADMIN</li>
               <li class="active"><a class="nav-link" href="/admin/dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
               <li class="nav-item dropdown">
@@ -21,10 +23,14 @@
                   <li><a class="nav-link" href="/admin/masterscore">Score</a></li>
                 </ul>
               </li>
+               @endadmin
+
+               @walikelas
               <li><a class="nav-link" href="/admin/listpelanggaran"><i class="fas fa-list-ol"></i> <span>List Pelanggaran</span></a></li>
               <li class="menu-header">WALIKELAS</li>
               <li class="active"><a class="nav-link" href="blank.html"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
               <li ><a class="nav-link" href="blank.html"><i class="fas fa-user"></i> <span>Students</span></a></li>
+              @endwalikelas
             </ul>
         </aside>
       </div>
