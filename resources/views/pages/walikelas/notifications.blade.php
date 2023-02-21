@@ -17,7 +17,15 @@
                       <div class="media-body">
                         <div class="badge badge-pill badge-primary mb-1 float-right">105 POINT</div>
                         <h6 class="media-title"><a href="#">Robet putra</a></h6>
-                        <div class="text-small text-muted">XII TKJ 2 <div class="bullet"></div> 4 Min</div>
+                        <div class="text-small text-muted">Memalsukan Surat Izin Keluar Sekolah | 2023-02-14</div>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <img class="mr-3 rounded-circle" width="50" src="../assets/img/avatar/avatar-5.png" alt="avatar">
+                      <div class="media-body">
+                        <div class="badge badge-pill badge-primary mb-1 float-right">105 POINT</div>
+                        <h6 class="media-title"><a href="#">Robet putra</a></h6>
+                        <div class="text-small text-muted">Memalsukan Surat Izin Keluar Sekolah | 2023-02-14</div>
                       </div>
                     </li>
                   </ul>
