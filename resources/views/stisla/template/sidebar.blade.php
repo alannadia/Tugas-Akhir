@@ -31,6 +31,7 @@
               <li class="menu-header">WALIKELAS</li>
               <li class="active"><a class="nav-link" href="/walikelas/dashboard"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
               <li ><a class="nav-link" href="/walikelas/students"><i class="fas fa-user"></i> <span>Students</span></a></li>
+              <li ><a class="nav-link" href="/walikelas/notifications"><i class="far fa-bell"></i> <span>Notifications</span></a></li>
               @endwalikelas
             </ul>
         </aside>
