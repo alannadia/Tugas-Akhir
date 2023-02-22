@@ -76,7 +76,7 @@
                         <div>Asmuin</div>
                       </div>
                     </a>
-                    <a href="features-tickets.html" class="ticket-item ticket-more">
+                    <a href="/walikelas/students" class="ticket-item ticket-more">
                       View All <i class="fas fa-chevron-right"></i>
                     </a>
                   </div>

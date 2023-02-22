@@ -8,6 +8,7 @@ use App\Http\Controllers\PelanggaranController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotificationsController;
 use App\Http\Controllers\ScoreReportController;
+use App\Http\Controllers\WalikelasController;
 
 
 /*
@@ -37,11 +38,12 @@ Route::get('/siswa/history', [NotificationsController::class,'siswa'])->name('si
 Route::get('/walikelas/dashboard', function () {
     return view('pages.walikelas.dashboard');
 });
-Route::get('/walikelas/students', function () {
-    return view('pages.walikelas.students');
-});
-Route::get('/walikelas/notifications', [NotificationsController::class, 'walikelas'])->name('notif.walikelas');
+// Route::get('/walikelas/students', function () {
+//     return view('pages.walikelas.students');
+// });
+Route::get('/walikelas/notifications', [WalikelasController::class, 'notifications'])->name('notif.walikelas');
 
+Route::get('/walikelas/students', [WalikelasController::class, 'students'])->name('walikelas.students');
 // AKHIR WALIKELAS
 
 //ADMIN 

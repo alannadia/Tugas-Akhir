@@ -24,37 +24,19 @@
             <th>#</th>
             <th>Name</th>
             <th>NISN</th>
-            <th>Score</th>
+            <th>Total Score</th>
             <th>Action</th>
         </tr>
+        <?php $i = 1;?>
+        @foreach($datasiswa as $ds)
         <tr>
-            <td>1</td>
-            <td>Irwansyah Saputra</td>
-            <td>2017-01-09</td>
-            <td><div class="badge badge-danger">250</div></td>
+            <td><?= $i++; ?></td>
+            <td>{{ $ds->nama }}</td>
+            <td>{{ $ds->nisn }}</td>
+            <td><div class="badge badge-<?php if($ds->score <= 55){ echo"success"; }elseif($ds->score > 55 && $ds->score <=149){ echo"warning";}elseif($ds->score > 149 && $ds->score <=250){ echo"danger";} ?>">{{ $ds->score }}</div></td>
             <td><a href="#" class="btn btn-warning" style="margin-right:20px;">Detail</a><a href="#" class="btn btn-success">View Score</a></td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Hasan Basri</td>
-            <td>2017-01-09</td>
-            <td><div class="badge badge-success">10</div></td>
-            <td><a href="#" class="btn btn-warning" style="margin-right:20px;">Detail</a><a href="#" class="btn btn-success">View Score</a></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Kusnadi</td>
-            <td>2017-01-11</td>
-            <td><div class="badge badge-warning">50</div></td>
-            <td><a href="#" class="btn btn-warning" style="margin-right:20px;">Detail</a><a href="#" class="btn btn-success">View Score</a></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Rizal Fakhri</td>
-            <td>2017-01-11</td>
-            <td><div class="badge badge-success">0</div></td>
-            <td><a href="#" class="btn btn-warning" style="margin-right:20px;">Detail</a><a href="#" class="btn btn-success">View Score</a></td>
-        </tr>
+        @endforeach
         </table>
     </div>
     </div>
