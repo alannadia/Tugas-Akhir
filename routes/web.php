@@ -68,3 +68,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 // Route::get('/logout')->middleware('auth');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.auth');
+
+Route::get('/suratperingatan', function () {
+    return view('surat');
+});
